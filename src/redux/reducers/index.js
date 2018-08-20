@@ -1,7 +1,10 @@
 import CountriesReducer from './CountriesReducer';
 import StateReducer from './StateReducer';
+import { combineReducers } from 'redux';
 
-export default {
+const reducers = combineReducers({
     countries: CountriesReducer,
-    state: StateReducer
-};
+    states: StateReducer
+});
+
+export default reducers;

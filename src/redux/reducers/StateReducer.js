@@ -3,11 +3,12 @@ import { STATES } from '../actions/types';
 const INITIAL_STATE = {
     loading: false,
     error: false,
-    list: []
+    list: [],
+    country: false
 };
 
-export default (state = INITIAL_STATE, action) => {
-    const { type, params } = action;
+const stateReducer = (state = INITIAL_STATE, action) => {
+    const { type, params, stateDropdown } = action;
 
     switch(type) {
         case STATES.REQUEST:
@@ -16,7 +17,11 @@ export default (state = INITIAL_STATE, action) => {
             return { loading: false, error: false, list: params };
         case STATES.ERROR:
             return { loading: false, error: true, list: [] };
+        case STATES.SELECTED:
+            return { ...state, state: stateDropdown };
         default:
             return state;
     }
 };
+
+export default stateReducer;

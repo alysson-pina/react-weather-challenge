@@ -14,3 +14,16 @@ export const fetchCountries = () => (dispatch) => {
         }
     );
 };
+
+export const countrySelected = (country) => (dispatch) => {
+    console.log(country);
+    dispatch({
+        type: COUNTRIES.SELECTED,
+        country: country
+    });
+};
+
+// export const countrySelected = (country) => ({
+//         type: COUNTRIES.SELECTED,
+//         country: country
+// });

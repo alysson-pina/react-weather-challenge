@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
-
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import rootReducer from './redux/reducers/index';
-
+import { connect } from 'react-redux';
 
 import logo from './logo.svg';
 import './App.css';
 
 import CountryDropdown from './components/CountryDropdown';
-import StateDropdown from './components/StateDropdown';
-
 
 class App extends Component {
+
+  constructor(props){
+      super(props);
+
+      this.state = {
+          fetchWeather: false,
+          country: false,
+          state: false
+      };
+  }
+
+  // onCountryChange(country) {
+  //     this.setState({
+  //         country: country
+  //     });
+  // }
+  //
+  // onStateChange(state) {
+  //   this.setState({
+  //       state: state
+  //   });
+  // }
+
   render() {
     return (
       <div className="App">
@@ -22,7 +39,6 @@ class App extends Component {
         </header>
         <div>
           <CountryDropdown />
-          <StateDropdown />
         </div>
 
       </div>
@@ -30,4 +46,9 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = store => ({
+    country: store.countries.country,
+    state: store.states.state
+});
+
+export default connect(mapStateToProps)(App);

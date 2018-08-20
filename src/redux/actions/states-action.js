@@ -1,7 +1,7 @@
 import Axios from 'axios';
 import { STATES } from './types';
 
-export const fetchStates = (country) => (dispatch) => {
+export const fetchStates = (states) => (dispatch) => {
 
     dispatch({type: STATES.REQUEST});
 
@@ -15,3 +15,8 @@ export const fetchStates = (country) => (dispatch) => {
         }
     );
 };
+
+export const stateSelected = state => ({
+    type: STATES.SELECTED,
+    stateDropdown: state
+});

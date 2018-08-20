@@ -2,8 +2,21 @@
   text-align: center;
 }
 
+header.App-header {
+    height: auto;
+}
+
+.collection-header {
+    list-style: none;
+}
+
+select {
+    display: block;
+    margin: 10px 0;
+}
+
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 5s linear;
   height: 80px;
 }
 
