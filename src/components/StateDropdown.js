@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 import Axios from 'axios';
 
@@ -81,24 +80,5 @@ class StateDropdown extends Component {
         );
     }
 }
-
-const mapStateToProps = (state) => ({
-    state: state.state
-});
-
-const mapDispatchToProps = dispatch => {
-    return {}
-};
-
-// const mapStateToProps = (store) => ({
-//     country: store.countries.country
-// });
-//
-// const mapDispatchToProps = (dispatch) => ({
-//     fetchStates: () => dispatch(fetchStates()),
-//     stateSelected: () => dispatch(stateSelected())
-// });
-
-// export default connect(mapStateToProps, mapDispatchToProps)(StateDropdown);
 
 export default StateDropdown;

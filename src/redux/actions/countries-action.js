@@ -22,8 +22,3 @@ export const countrySelected = (country) => (dispatch) => {
         country: country
     });
 };
-
-// export const countrySelected = (country) => ({
-//         type: COUNTRIES.SELECTED,
-//         country: country
-// });

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Collection, CollectionItem } from 'react-materialize';
 
 import Axios from 'axios';
@@ -76,13 +75,4 @@ class Weather extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({
-    state: state.state
-});
-
-const mapDispatchToProps = dispatch => {
-    return {}
-};
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Weather);
 export default Weather;

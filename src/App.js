@@ -18,18 +18,6 @@ class App extends Component {
       };
   }
 
-  // onCountryChange(country) {
-  //     this.setState({
-  //         country: country
-  //     });
-  // }
-  //
-  // onStateChange(state) {
-  //   this.setState({
-  //       state: state
-  //   });
-  // }
-
   render() {
     return (
       <div className="App">

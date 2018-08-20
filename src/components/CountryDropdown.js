@@ -22,10 +22,6 @@ class CountryDropdown extends Component {
     }
 
     handleChange(event) {
-        // const { countrySelected } = this.props;
-        // debugger;
-        // countrySelected(`${event.target.value}`);
-
         this.setState({
             selectedCountry: `${event.target.value}`
         });
